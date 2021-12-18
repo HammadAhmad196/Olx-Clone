@@ -1,0 +1,282 @@
+/* Home Component Style */
+
+.banner {
+  background-image: url("./images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 30vh;
+  height: 40vh;
+  width: 100%;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .banner {
+    background-size: contain;
+    height: 40vh;
+  }
+}  
+
+/* Ending */
+
+
+/* Login Signup Component Start */
+.body {
+  background: #ecf0f3
+}
+
+.wrapper {
+  max-width: 350px;
+  min-height: 500px;
+  margin: 80px auto;
+  padding: 40px 30px 30px 30px;
+  background-color: #ecf0f3;
+  border-radius: 15px;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff
+}
+
+.logo {
+  width: 80px;
+  margin: auto
+}
+
+.logo img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
+}
+
+.wrapper .name {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+  padding-left: 10px;
+  color: #555
+}
+
+.wrapper .form-field input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 10px 15px 10px 10px
+}
+
+.wrapper .form-field {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+}
+
+.wrapper .form-field .fas {
+  color: #555
+}
+
+.wrapper .btn {
+  box-shadow: none;
+  width: 100%;
+  height: 40px;
+  background-color: #03A9F4;
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+  letter-spacing: 1.3px
+}
+
+.wrapper .btn:hover {
+  background-color: #039BE5
+}
+
+.wrapper Link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #03A9F4
+}
+
+.wrapper Link:hover {
+  color: #039BE5
+}
+
+@media(max-width: 380px) {
+  .wrapper {
+      margin: 30px 20px;
+      padding: 40px 15px 15px 15px
+  }
+}
+
+/* Pagination Start  */
+
+/* End */
+
+/* Footer Component Start  */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+/* 1st Footer */
+.footer {
+width: 100%;
+margin-top: 10rem;
+}
+.footer {
+background-color: #f7f8f9;
+}
+.footer_phoneapp_text {
+margin-top: 20px;
+padding: 7px;
+border-right: 1px solid black;
+margin-bottom: 20px;
+padding-right: 10px;
+}
+.footer_phoneapp_text > p {
+font-size: 17px;
+font-weight: 500;
+padding-right: 5px;
+}
+.footer_apps {
+margin-top: 40px;
+margin-bottom: 20px;
+}
+.footer_apps > div {
+padding-left: 40px;
+}
+.footer_apps > div > h5 {
+font-size: medium;
+font-weight: bold;
+}
+.footer_apps > div > img {
+margin-right: 5px;
+width: 110px;
+}
+/* 1st Footer */
+
+/* Actual Footer */
+.footer-main {
+width: 100%;
+background-color: #ebeeef;
+padding-bottom: 20px;
+border-top: 1px solid black;
+}
+
+.sub-category {
+margin-top: 20px;
+}
+.sub-category > h3 {
+font-size: medium;
+margin-bottom: 10px;
+}
+.sub-category > ul {
+list-style: none;
+margin-left: -40px;
+}
+.sub-category > ul > li {
+font-size: small;
+color: #7e8181;
+}
+.icon {
+margin-left: -10px;
+}
+.Footer_socialmedia {
+margin-top: -10px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin-left: -10px;
+margin-bottom: 10px;
+}
+/* Actual Footer */
+/* End Footer */
+
+.footer-end {
+height: auto;
+width: 100%;
+background-color: #002f34;
+}
+
+.footer-end {
+height: auto;
+width: 100%;
+background-color: #002f34;
+color: white;
+display: flex;
+justify-content: space-between;
+}
+.footer__copyright {
+float: left;
+margin: 12px 50px;
+}
+.footer__copyright > span {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+.footer__copyright > span:nth-child(1) {
+font-weight: 700;
+padding-right: 8px;
+}
+.footer__othercountries {
+margin: 12px 90px;
+}
+.footer__othercountries > small {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+.footer__othercountries > small:nth-child(1) {
+font-weight: 700;
+padding-right: 8px;
+}
+
+@media screen and (max-width: 890px) {
+.footer-end {
+  flex-direction: column;
+}
+.footer__othercountries {
+  margin: 15px auto;
+}
+.footer__copyright {
+  margin: 15px auto;
+}
+}
+
+/* End Footer */
+
+/* Footer Component End */
+
+/* Add Component Start */
+
+.cardCon {
+  width: 17rem;
+  color: black;
+  margin-top: 0;
+  height: auto;
+  line-height: 0.5rem;
+}
+
+#pic {
+  max-width: 16rem;
+  max-height: 10rem;
+  border: 1px solid;
+}
+.favor {
+  position: relative;
+  border: 1px solid red;
+  bottom: 50%;
+  left: 90%;
+}
+
+
+/* Add Component End */
+
+/* Add Detail */
+
+.slider {
+  height: 300px;
+}  
+
+/* End */
+
+
+/*  */

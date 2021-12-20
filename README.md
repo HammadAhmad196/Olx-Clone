@@ -1,5 +1,2 @@
 # Olx-Clone
-# Olx-Clone
-# olx-clone
-# olx-clone
-# olx-clone
+Live Link: https://xenodochial-lichterman-53702a.netlify.app/

@@ -20,9 +20,9 @@ const Home = () => {
     dispatch(listAds());
   }, [dispatch]);
 
-  // const handleLoadMore = () => {
-  //   dispatch(listAdsNext())
-  // }
+  const handleLoadMore = () => {
+    dispatch(listAdsNext())
+  }
 
   return (
     <>
@@ -45,7 +45,7 @@ const Home = () => {
           </Container>
         </>
       )}
-      {/* <>
+      <>
         <div
           style={{
             display: "flex",
@@ -56,8 +56,7 @@ const Home = () => {
         >
           <button onClick={handleLoadMore}>Load More</button>
         </div>
-      </> */}
-      <Pagination />
+      </>
       <Footer />
     </>
   );

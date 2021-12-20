@@ -108,7 +108,9 @@ const MyAds = ({ history }) => {
         <>
           <Container>
             <Row>
+        
               <Table responsive hover striped>
+                {ads.length ?
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -116,7 +118,7 @@ const MyAds = ({ history }) => {
                     <th> Price</th>
                     <th> Location</th>
                   </tr>
-                </thead>
+                </thead>: null}
                 <tbody>
                   {ads.map((v, i) => (
                     <tr key={i}>
@@ -157,7 +159,8 @@ const MyAds = ({ history }) => {
                     </tr>
                   ))}
                 </tbody>
-              </Table>
+              </Table>)
+          
             </Row>
 
             <Modal

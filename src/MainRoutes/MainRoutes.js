@@ -7,6 +7,7 @@ import Search from "../pages/Search/Search";
 import Category from "../pages/Category/Category";
 import MyAds from "../pages/MyAds/MyAds";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Pagination from '../components/Pagination/Pagination';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/myads" component={MyAds} exact></Route>
             <Route path="/category/:cat" component={Category} exact></Route>
             <Route path="/search/:keyword" component={Search} exact />
+            <Route path="/pagination" component={Pagination} exact />
           </Switch>
         </div>
       </Router>

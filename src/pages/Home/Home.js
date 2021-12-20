@@ -7,6 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import Message from "../../components/Message/Message";
 import { listAds, listAdsNext } from "../../store/actions/adActions";
+import Pagination from "../../components/Pagination/Pagination";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -19,9 +20,9 @@ const Home = () => {
     dispatch(listAds());
   }, [dispatch]);
 
-  const handleLoadMore = () => {
-    dispatch(listAdsNext())
-  }
+  // const handleLoadMore = () => {
+  //   dispatch(listAdsNext())
+  // }
 
   return (
     <>
@@ -44,7 +45,7 @@ const Home = () => {
           </Container>
         </>
       )}
-      <>
+      {/* <>
         <div
           style={{
             display: "flex",
@@ -55,7 +56,8 @@ const Home = () => {
         >
           <button onClick={handleLoadMore}>Load More</button>
         </div>
-      </>
+      </> */}
+      <Pagination />
       <Footer />
     </>
   );

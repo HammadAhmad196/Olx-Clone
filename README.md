@@ -1,2 +1,2 @@
 # Olx-Clone
-Live Link: https://xenodochial-lichterman-53702a.netlify.app/
+Live Link: https://61c033c5856b549ad9b98a76--stupefied-bardeen-dc35bf.netlify.app/

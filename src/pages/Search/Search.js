@@ -7,6 +7,8 @@ import Loader from "../../components/Loader/Loader";
 import Message from "../../components/Message/Message";
 import Ad from "../../components/Ad/Ad";
 import Meta from "../../components/Meta/Meta";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Search = ({ match }) => {
   const keyword = match.params.keyword;
@@ -20,9 +22,10 @@ const Search = ({ match }) => {
 
   return (
     <>
+      <Header />
       <Container fluid>
         <Meta title={`Search for ${keyword}`} />
-        <h1 className="text-center"> Showing Results for {keyword}</h1>
+        {/* <h1 className="text-center"> Showing Results for {keyword}</h1> */}
         <Link to="/" className="btn btn-info py-3">
           Go Back
         </Link>
@@ -53,6 +56,7 @@ const Search = ({ match }) => {
           </Container>
         </>
       )}
+      <Footer />
     </>
   );
 };

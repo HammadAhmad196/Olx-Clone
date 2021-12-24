@@ -6,6 +6,7 @@ import Message from "../../components/Message/Message";
 import Loader from "../../components/Loader/Loader";
 
 import { register } from "../../store/actions/userActions";
+
 const Register = ({ location, history }) => {
   const dispatch = useDispatch();
   const userRegister = useSelector((state) => state.userRegister);
@@ -34,16 +35,16 @@ const Register = ({ location, history }) => {
   };
   return (
     <>
-      <div class="wrapper body">
-        <div class="logo">
+      <div className="wrapper body">
+        <div className="logo">
           <img src="https://cdn3.iconfinder.com/data/icons/blue-line-interface/64/user-512.png" alt="" /> </div>
-        <div class="text-center mt-4 name"> SignUp </div>
+        <div className="text-center mt-4 name"> SignUp </div>
         {error && <Message variant="danger">{error}</Message>}
         {message && <Message variant="danger">{message}</Message>}
 
         {loading && <Loader />}
-        <form class="p-3 mt-3" onSubmit={submitHandler}>
-          <div class="form-field d-flex align-items-center">
+        <form className="p-3 mt-3" onSubmit={submitHandler}>
+          <div className="form-field d-flex align-items-center">
             <Form.Group controlId="name">
               <Form.Control
                 type="text"
@@ -55,7 +56,7 @@ const Register = ({ location, history }) => {
               ></Form.Control>
             </Form.Group>
           </div>
-          <div class="form-field d-flex align-items-center">
+          <div className="form-field d-flex align-items-center">
             <Form.Group controlId="email">
               <Form.Control
                 type="email"
@@ -68,7 +69,7 @@ const Register = ({ location, history }) => {
             </Form.Group>
           </div>
 
-          <div class="form-field d-flex align-items-center">
+          <div className="form-field d-flex align-items-center">
             <Form.Group controlId="password">
               <Form.Control
                 type="password"
@@ -80,7 +81,7 @@ const Register = ({ location, history }) => {
               ></Form.Control>
             </Form.Group>
           </div>
-          <div class="form-field d-flex align-items-center">
+          <div className="form-field d-flex align-items-center">
             <Form.Group controlId="confirmPassword">
               <Form.Control
                 type="password"
@@ -92,9 +93,9 @@ const Register = ({ location, history }) => {
               ></Form.Control>
             </Form.Group>
           </div>
-          <button class="btn mt-3">Signup</button>
+          <button className="btn mt-3">Signup</button>
         </form>
-        <div class="text-center fs-6"> <Link to="/login">Already have an account?</Link> or <Link to="/login">Login</Link> </div>
+        <div className="text-center fs-6"> <Link to="/login">Already have an account?</Link> or <Link to="/login">Login</Link> </div>
       </div>
 
     </>

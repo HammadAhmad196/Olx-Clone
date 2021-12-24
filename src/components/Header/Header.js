@@ -33,19 +33,19 @@ const Header = () => {
           <Route render={({ history }) => <SearchBox history={history} />} />
           <Nav className="ms-auto">
             <NavDropdown title="Categories" id="categories">
-              <LinkContainer to="/category/cars">
+              <LinkContainer to="/cars">
                 <NavDropdown.Item>Cars</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/category/bikes">
+              <LinkContainer to="/bikes">
                 <NavDropdown.Item>Bikes</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/category/mobiles">
+              <LinkContainer to="/mobiles">
                 <NavDropdown.Item>Mobiles</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/category/camera">
+              <LinkContainer to="/camera">
                 <NavDropdown.Item>Camera</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/category/tablets">
+              <LinkContainer to="/tablets">
                 <NavDropdown.Item>Tablets</NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>

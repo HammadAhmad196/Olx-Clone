@@ -9,6 +9,7 @@ import Slider from "../../components/Slider";
 import Meta from "../../components/Meta/Meta";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Show from "./Show";
 
 const AdDetails = ({ match, location }) => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const AdDetails = ({ match, location }) => {
     dispatch(listAdDetails(match.params.id));
   }, [dispatch, match]);
   console.log(location);
+
   return (
     <>
       <Header></Header>
@@ -47,6 +49,9 @@ const AdDetails = ({ match, location }) => {
                 <ListGroup.Item>Price: Rs{ad.price}</ListGroup.Item>
                 <ListGroup.Item>Description: {ad.description}</ListGroup.Item>
                 <ListGroup.Item>Location: {ad.city}</ListGroup.Item>
+                <ListGroup.Item>
+                  <Show />
+                </ListGroup.Item>
               </ListGroup>
             </Col>
           </Row>

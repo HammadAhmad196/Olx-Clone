@@ -7,6 +7,8 @@ import Loader from "../../components/Loader/Loader";
 import Message from "../../components/Message/Message";
 import Meta from "../../components/Meta/Meta";
 import Ad from "../../components/Ad/Ad";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Category = ({ match }) => {
   const category = match.params.cat;
@@ -19,6 +21,7 @@ const Category = ({ match }) => {
   }, [dispatch, category, filter]);
   return (
     <>
+      <Header />
       <Container fluid>
         <h1 className="text-center"> Showing Results for {category}</h1>
         <Link to="/" className="btn btn-info py-3">
@@ -52,6 +55,7 @@ const Category = ({ match }) => {
           </Container>
         </>
       )}
+      <Footer />
     </>
   );
 };

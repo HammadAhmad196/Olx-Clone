@@ -1,34 +1,33 @@
-// import React, { useEffect } from 'react';
-// import { listAds, listAdsNext } from "../../store/actions/adActions";
-// import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { listAds, listAdsNext } from "../../store/actions/adActions";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-// function Pagination() {
+function Pagination() {
 
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(listAds());
+  // }, [dispatch]);
 
-//   useEffect(() => {
-//     dispatch(listAds());
-//   }, [dispatch]);
+  const handleLoadMore = () => {
+    dispatch(listAdsNext())
+  }
 
-//   const handleLoadMore = () => {
-//     dispatch(listAdsNext())
-//   }
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          textAlign: "center",
+          justifyContent: "center",
+          marginTop: "5%"
+        }}
+      >
+        <button onClick={() => handleLoadMore()}>Load More</button>
+      </div>
+    </>
+  )
+}
 
-//   return (
-//     <>
-//       <div
-//         style={{
-//           display: "flex",
-//           textAlign: "center",
-//           justifyContent: "center",
-//           marginTop: "5%"
-//         }}
-//       >
-//         <button onClick={handleLoadMore}>Load More</button>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Pagination
+export default Pagination;

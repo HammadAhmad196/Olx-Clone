@@ -25,6 +25,12 @@ const LoginScreen = ({ location, history }) => {
     e.preventDefault();
     dispatch(login(email, password));
   };
+
+  // const handleClick = () => {
+  //   history.push("/ad");
+  // }
+
+
   return (
     <>
       <div class="wrapper body">

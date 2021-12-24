@@ -8,6 +8,7 @@ import {
   userRegisterSuccess,
 } from "../constants/userConstants";
 import { auth } from "../../config/firebase";
+
 export const register = (name, mail, password) => async (dispatch) => {
   try {
     dispatch({

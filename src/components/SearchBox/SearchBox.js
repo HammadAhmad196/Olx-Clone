@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import Header from "../Header/Header";
 
 const SearchBox = ({ history }) => {
   const [keyword, setKeyword] = useState("");
@@ -12,22 +13,24 @@ const SearchBox = ({ history }) => {
     }
   };
   return (
-    <Form onSubmit={submitHandler} inline className="navForm">
-      <Form.Control
-        type="text"
-        name="q"
-        onChange={(e) => setKeyword(e.target.value)}
-        placeholder="Find cars Mobiles and many more"
-        className="ml-sm-2 search"
-      />
-      <Button
-        type="submit"
-        variant="dark"
-        style={{ display: "inline", height: "3rem", marginLeft: "1px" }}
-      >
-        <i className="fa fa-search" aria-hidden="true"></i>
-      </Button>
-    </Form>
+    <>
+      <Form onSubmit={submitHandler} inline className="navForm">
+        <Form.Control
+          type="text"
+          name="q"
+          onChange={(e) => setKeyword(e.target.value)}
+          placeholder="Find cars Mobiles and many more"
+          className="ml-sm-2 search"
+        />
+        <Button
+          type="submit"
+          variant="dark"
+          style={{ display: "inline", height: "3rem", marginLeft: "1px" }}
+        >
+          <i className="fa fa-search" aria-hidden="true"></i>
+        </Button>
+      </Form>
+    </>
   );
 };
 

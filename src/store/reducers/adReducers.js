@@ -26,7 +26,10 @@ import {
   Ad_Update_Reset,
   Ad_Update_Success,
 } from "../constants/adConstants";
-export const ad_ListReducer = (state = { ads: [] }, action) => {
+
+
+let initState = { ads: [] }
+export const ad_ListReducer = (state = initState, action) => {
   switch (action.type) {
     case Ad_List_Request:
       return {

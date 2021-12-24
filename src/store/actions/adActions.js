@@ -26,18 +26,45 @@ import {
   Ad_Update_Success,
 } from "../constants/adConstants";
 import { db } from "../../config/firebase";
+export const listAds = () => async (dispatch, getState) => {
 
-export const listAds = () => async (dispatch) => {
   try {
     dispatch({ type: Ad_List_Request });
-    const data = await db.collection("adds").orderBy("date").limit(10).get();
-    console.log(data)
-    let ads = [];
+
+    const store = getState()
+    // console.log("store value current", store)
+    const currentUser = store.userLogin?.userInfo?.uid
+    // console.log("userId", currentUser)
+    let ads = []
+
+
+    let query = db
+      .collection("adds")
+      .orderBy("uid")
+      .limit(10)
+
+
+    if (currentUser) {
+      query = db
+        .collection("adds")
+        .where('uid', '!=', currentUser)
+        .orderBy("uid")
+        .limit(3)
+    }
+
+    const data = await query.get();
+
+    // ads = data.docs
+    //   .filter((add) => add.data.uid !== ads.uid)
+    //   .map((add) => add.data());
+    // return ads
+
     data.forEach((doc) => {
       let ad = doc.data();
       ad = { ...ad, id: doc.id };
       ads.push(ad);
     });
+
     dispatch({ type: Ad_List_Success, payload: ads });
   } catch (error) {
     console.log(error)
@@ -48,9 +75,10 @@ export const listAds = () => async (dispatch) => {
   }
 };
 
+
+
 export const listAdsNext = () => async (dispatch) => {
   try {
-    console.log("listAdsNext")
     dispatch({ type: Ad_List_Request });
     const snapshot = await db.collection("adds").orderBy("date").limit(10).get();
     const last = snapshot.docs[snapshot.docs.length - 1];

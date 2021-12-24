@@ -159,8 +159,7 @@ const MyAds = ({ history }) => {
                     </tr>
                   ))}
                 </tbody>
-              </Table>)
-          
+              </Table>
             </Row>
 
             <Modal

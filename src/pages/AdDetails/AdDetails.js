@@ -21,7 +21,7 @@ const AdDetails = ({ match, location }) => {
   useEffect(() => {
     dispatch(listAdDetails(match.params.id));
   }, [dispatch, match]);
-  console.log(location);
+  // console.log(location);
 
   return (
     <>

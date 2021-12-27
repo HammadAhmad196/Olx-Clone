@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 // import Header from "../Header/Header";
 
 const Ad = ({ ad }) => {
-  const dispatch = useDispatch();
-  
+  // const dispatch = useDispatch();
+
   return (
     <>
       {/* <Header /> */}

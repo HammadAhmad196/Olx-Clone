@@ -6,9 +6,9 @@ import { useDispatch } from "react-redux";
 function Pagination() {
 
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(listAds());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(listAds());
+  }, [dispatch]);
 
   const handleLoadMore = () => {
     dispatch(listAdsNext())
@@ -21,7 +21,7 @@ function Pagination() {
           display: "flex",
           textAlign: "center",
           justifyContent: "center",
-          marginTop: "5%"
+          marginTop: "8%"
         }}
       >
         <button onClick={() => handleLoadMore()}>Load More</button>
@@ -31,3 +31,9 @@ function Pagination() {
 }
 
 export default Pagination;
+
+
+
+
+
+

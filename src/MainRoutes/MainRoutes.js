@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import AdDetails from "../pages/AdDetails/AdDetails";
@@ -9,7 +9,8 @@ import MyAds from "../pages/MyAds/MyAds";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Pagination from '../components/Pagination/Pagination';
 import Show from '../pages/AdDetails/Show';
-import PrivateRoutes from '../Routes/PrivateRoutes/PrivateRoutes';
+import PrivateRoute from '../Routes/PrivateRoute/PrivateRoute';
+
 
 const App = () => {
   return (
@@ -19,19 +20,23 @@ const App = () => {
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/login" component={Login} exact></Route>
-            <PrivateRoutes path="/show" Component={Show}
-            />
             <Route path="/register" component={Register} exact></Route>
-            <Route path="/ad/:id" component={AdDetails} exact></Route>
-            <Route path="/ad/:id?" Component={AdDetails} exact />
+            <PrivateRoute path="/ad/:id" exact
+              component={AdDetails}
+            />
+            {/* <PrivateRoute
+              path="/ad/:id?"
+              Component={AdDetails}
+            /> */}
+            {/* <Route path="/ad/:id" Component={Show} exact></Route> */}
             <Route path="/myads" component={MyAds} exact></Route>
             <Route path="/:cat" component={Category} exact></Route>
             <Route path="/search/:keyword" component={Search} exact />
             <Route path="/pagination" component={Pagination} exact />
           </Switch>
         </div>
-      </Router>
-    </div>
+      </Router >
+    </div >
   );
 };
 

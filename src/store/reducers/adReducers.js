@@ -28,7 +28,11 @@ import {
 } from "../constants/adConstants";
 
 
-let initState = { ads: [] }
+let initState = {
+  ads: [],
+  ad: {},
+
+}
 export const ad_ListReducer = (state = initState, action) => {
   switch (action.type) {
     case Ad_List_Request:
@@ -50,7 +54,7 @@ export const ad_ListReducer = (state = initState, action) => {
       return state;
   }
 };
-export const adDetailsReducer = (state = { ad: {} }, action) => {
+export const adDetailsReducer = (state = initState, action) => {
   switch (action.type) {
     case Ad_Detail_Request:
       return {
@@ -78,7 +82,7 @@ export const adDetailsReducer = (state = { ad: {} }, action) => {
       return state;
   }
 };
-export const adSearchReducer = (state = { ads: [] }, action) => {
+export const adSearchReducer = (state = initState, action) => {
   switch (action.type) {
     case Ad_Search_Request:
       return {
@@ -103,7 +107,7 @@ export const adSearchReducer = (state = { ads: [] }, action) => {
       return state;
   }
 };
-export const adFilterReducer = (state = { ads: [] }, action) => {
+export const adFilterReducer = (state = initState, action) => {
   switch (action.type) {
     case Ad_Filter_Request:
       return {
